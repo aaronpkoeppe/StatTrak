@@ -1,18 +1,21 @@
 public class Player {
-    private String teamName;
-    private String name;
-    private int number;
+    private String Team;
+    private String Name;
+    private int playerNumber;
     private int fieldGoals_freeThrow;
     private int fieldGoals_2pt;
     private int fieldGoal_3pt;
     private int fouls;
     private int techFouls;
     private int attempts;
+    private int totalPoints;
+
+
 
     public Player (){
-        this.teamName = null;
-     this.name = null;
-     this.number = 0;
+        this.Team = null;
+     this.Name = null;
+     this.playerNumber = 0;
      this.fieldGoals_freeThrow = 0;
      this.fieldGoals_2pt = 0;
      this.fieldGoal_3pt = 0;
@@ -22,33 +25,38 @@ public class Player {
 
     }
     public Player (String name, int number){
+        this.Name = null;
+        this.playerNumber = 0;
+        this.fieldGoals_freeThrow = 0;
+        this.fieldGoals_2pt = 0;
+        this.fieldGoal_3pt = 0;
+        this.fouls = 0;
+
+
+    }
+    public String getTeam() {
+        return Team;
+    }
+    public void setTeam(String teamName) {
+        this.Team = teamName;
+    }
+
+    public String getPlayerName(String playerName, int number) {
         this();
-        this.teamName = null;
-        this.number = 0;
-        this.name = name;
-        this.number = number;
-
-    }
-    public String getTeamName() {
-        return teamName;
-    }
-    public void setTeamName(String teamName) {
-        this.teamName = teamName;
-    }
-
-    public String getName() {
-        return name;
+        this.Name = playerName;
+        this.playerNumber = number;
+        return playerName;
     }
     public void setName(String name) {
-        this.name = name;
+        this.Name = name;
     }
 
-    public int getNumber() {
-        return number;
+    public int getPlayerNumber() {
+        return playerNumber;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public void setPlayerNumber(int playerNumber) {
+        this.playerNumber = playerNumber;
     }
 
     public void shotAttempt(int shotType, boolean made){
@@ -82,8 +90,8 @@ public class Player {
     public int getThreePointer() {
         return fieldGoal_3pt;
     }
-    public void displayStats(){
+    public void displayStats() {
 
+        }
     }
-}
 
