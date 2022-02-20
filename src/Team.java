@@ -7,13 +7,8 @@
             name = null;
             player1 = new Player();
             player2 = new Player();
-
-                public Team(){
-                this();
-                this.teamName = null;
-            // THIS NEEDS SETTERS AND GETTERS
-                }
         }
+
         public int getTeamFouls(){
             return player1.getFouls() + player2.getFouls();
         }

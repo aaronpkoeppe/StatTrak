@@ -1,31 +1,28 @@
 public class Player {
-    private String Team;
-    private String Name;
+    private String team;
+    private String name;
     private int playerNumber;
     private int fieldGoals_freeThrow;
     private int fieldGoals_2pt;
     private int fieldGoal_3pt;
-    private int fouls;
-    private int techFouls;
+    public int fouls;
     private int attempts;
     private int totalPoints;
 
-
-
-    public Player (){
-        this.Team = null;
-     this.Name = null;
-     this.playerNumber = 0;
-     this.fieldGoals_freeThrow = 0;
-     this.fieldGoals_2pt = 0;
-     this.fieldGoal_3pt = 0;
-     this.techFouls = 0;
-     this.fouls = 0;
-     this.attempts = 0;
+    public Player() {
+        this.team = null;
+        this.name = null;
+        this.playerNumber = 0;
+        this.fieldGoals_freeThrow = 0;
+        this.fieldGoals_2pt = 0;
+        this.fieldGoal_3pt = 0;
+        this.fouls = 0;
+        this.attempts = 0;
 
     }
-    public Player (String name, int number){
-        this.Name = null;
+
+    public Player(String name, int number) {
+        this.name = null;
         this.playerNumber = 0;
         this.fieldGoals_freeThrow = 0;
         this.fieldGoals_2pt = 0;
@@ -34,21 +31,23 @@ public class Player {
 
 
     }
+
     public String getTeam() {
-        return Team;
+        return team;
     }
+
     public void setTeam(String teamName) {
-        this.Team = teamName;
+        this.team = teamName;
     }
 
     public String getPlayerName(String playerName, int number) {
-        this();
-        this.Name = playerName;
+        this.name = playerName;
         this.playerNumber = number;
         return playerName;
     }
+
     public void setName(String name) {
-        this.Name = name;
+        this.name = name;
     }
 
     public int getPlayerNumber() {
@@ -59,22 +58,22 @@ public class Player {
         this.playerNumber = playerNumber;
     }
 
-    public void shotAttempt(int shotType, boolean made){
-        switch(shotType){
+    public void shotAttempt(int shotType, boolean made) {
+        switch (shotType) {
             case 1:
-                attempts ++;
+                attempts++;
                 fieldGoals_freeThrow += made ? 1 : 0;
                 break;
             case 2:
-                attempts ++;
+                attempts++;
                 fieldGoals_2pt += made ? 1 : 0;
                 break;
             case 3:
-                attempts ++;
+                attempts++;
                 fieldGoal_3pt += made ? 1 : 0;
                 break;
 
-            default :
+            default:
                 System.out.println("invalid shot type: " + shotType);
         }
     }
@@ -90,8 +89,17 @@ public class Player {
     public int getThreePointer() {
         return fieldGoal_3pt;
     }
+
     public void displayStats() {
 
-        }
     }
+    public int getFouls(){
+        return fouls;
+
+    }
+    public String getTeamName(){
+        return team;
+    }
+
+}
 
