@@ -40,10 +40,8 @@ public class Player {
         this.team = teamName;
     }
 
-    public String getPlayerName(String playerName, int number) {
-        this.name = playerName;
-        this.playerNumber = number;
-        return playerName;
+    public String getPlayerName() {
+        return name;
     }
 
     public void setName(String name) {
@@ -92,6 +90,7 @@ public class Player {
 
     public void displayStats() {
 
+
     }
     public int getFouls(){
         return fouls;
@@ -100,6 +99,10 @@ public class Player {
     public String getTeamName(){
         return team;
     }
+    public int getTotalPoints(){
+        return totalPoints;
+    }
+
 
 }
 

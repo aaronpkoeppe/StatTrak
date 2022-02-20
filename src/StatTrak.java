@@ -82,11 +82,19 @@ public class StatTrak {
         name = Input.getLine("Enter " + teamName + "'s #1 player's name: ");
         number = Input.getIntRange("Enter " + name + " jersey number: ", 0,
                 99);
-        team.setPlayer1(name, number);
+
+        Player player1 = new Player();
+        player1.setName(name);
+        player1.setPlayerNumber(number);
+
+        team.setPlayer1(player1);
         System.out.println();
         name = Input.getLine("Enter " + teamName + "'s #2 player's name: ");
         number = Input.getIntRange("Enter " + name + " jersey number: ", 0, 99);
-        team.setPlayer2(name, number);
+        Player player2 = new Player();
+        player2.setName(name);
+        player2.setPlayerNumber(number);
+        team.setPlayer2(player2);
 
     } // end of playerSetup
 
@@ -213,7 +221,7 @@ public class StatTrak {
                 player.shotAttempt(type, true);
             System.out.println();
         } // end of if-else
-        player.quickStats();
+       // player..quickStats();
     }
 
     /**
@@ -231,16 +239,16 @@ public class StatTrak {
      */
     private void displayGameStatus() {
 
-        team1.getPlayer1().fullStats();
+        team1.getPlayer1().displayStats();
         System.out.println();
 
-        team1.getPlayer2().fullStats();
+        team1.getPlayer2().displayStats();
         System.out.println();
 
-        team2.getPlayer1().fullStats();
+        team2.getPlayer1().displayStats();
         System.out.println();
 
-        team2.getPlayer2().fullStats();
+        team2.getPlayer2().displayStats();
         System.out.println();
 
     } // end of playGame
@@ -252,9 +260,9 @@ public class StatTrak {
      * @param args No command line input args are used for this application
      */
     public static void main(String[] args) {
-        playerCode app = new playerCode();
+        StatTrak app = new StatTrak();
         app.displayAppHeading();
-        app.Team();
+        app.teamSetup();
         app.playGame();
         Input.sc.close();
     } // end of main
