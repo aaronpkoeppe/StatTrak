@@ -44,7 +44,7 @@
      }
      public void listPlayers(){
          System.out.println("#1 = " + player1.getPlayerName() + " #" + player1.getPlayerNumber());
-         System.out.println("#1 = " + player2.getPlayerName() + " #" + player2.getPlayerNumber());
+         System.out.println("#2 = " + player2.getPlayerName() + " #" + player2.getPlayerNumber());
      }
     public void displayStats(){
         System.out.println(name + " Fouls" + " = " + getTeamFouls() + " Points = " + getTeamPoints());

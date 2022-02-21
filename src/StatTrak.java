@@ -204,7 +204,7 @@ public class StatTrak {
         System.out.println(singleLine);
         System.out.println();
         if (type == 0) {
-            player.getFouls();
+            player.setFouls(player.getFouls() + 1);
         } else {
             System.out.println(singleLine);
             System.out.println("Select Attempt");
