@@ -2,8 +2,8 @@
  * Basketball Stats Application
  *
  * @author Aaron Koeppe
+ * @version 8, 0
  * @since 2022.02.18
- * @version 8,0
  */
 public class StatTrak {
     /**
@@ -39,7 +39,7 @@ public class StatTrak {
     } // end of default constructor
 
     /**
-     *  Displays the BB Stats App header
+     * Displays the BB Stats App header
      */
     private void displayAppHeading() {
 
@@ -163,6 +163,7 @@ public class StatTrak {
 
     /**
      * Update the select team's stats
+     *
      * @param team The team to enter stats for
      */
     private void updateTeamStats(Team team) {
@@ -221,7 +222,7 @@ public class StatTrak {
                 player.shotAttempt(type, true);
             System.out.println();
         } // end of if-else
-       // player..quickStats();
+        // player..quickStats();
     }
 
     /**

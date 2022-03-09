@@ -4,6 +4,10 @@ public class Input {
 
     public static Scanner sc = new Scanner(System.in);
 
+    /**
+     * @param prompt
+     * @return
+     */
     public static String getLine(String prompt) {
 
         System.out.print(prompt);
@@ -11,6 +15,10 @@ public class Input {
 
     } // end of getLine
 
+    /**
+     * @param prompt
+     * @return
+     */
     public static int getInt(String prompt) {
         int userInput = 0;
 
@@ -32,6 +40,12 @@ public class Input {
 
     } // end of getInt
 
+    /**
+     * @param prompt
+     * @param low
+     * @param high
+     * @return
+     */
     public static int getIntRange(String prompt, int low, int high) {
         int userInput;
 
